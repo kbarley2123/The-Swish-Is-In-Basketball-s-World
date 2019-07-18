@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Basketball's Swish</title>
+<meta http-equiv="refresh" content="5;
+URL='http://www.basketballswish.com/nba'"/>
+</head>
+<body>
+	<h1>The Swish Is In: Basketball's World</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+	<nav class="navbar-inverse">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+				<a href="https://www.nba.com/scores#/" class="navbar-brand">NBA Apps</a>
+			</div>
+
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="https://www.nba.com/#/">NBA Home Page</a></li>
+					<li><a href="https://stats.nba.com/">NBA Stats</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdwon-toggle" data-toggle="dropdown">My Favorite Team<span class = "caret"</span></a>
+					<ul class = "dropdown-menu">
+						<li><a href="https://www.nba.com/teams/hawks">Atlanta Hawks</li>
+						<li><a href="https://www.nba.com/teams/celtics">Boston Celtics</li>
+						<li><a href="https://www.nba.com/teams/nets">Brooklyn Nets</li>
+						<li><a href="https://www.nba.com/teams/hornets">Charlotte Hornets</li>
+						<li><a href="https://www.nba.com/teams/bulls">Chicago Bulls</li>
+						<li><a href="https://www.google.com/search?ei=MdXAXNOtG-3c5gKpo7K4DA&q=nba+teams&oq=nba+teams&gs_l=psy-ab.3..0i131l2j0j0i131j0l2j0i131j0l3.1816.4401..5335...0.0..0.124.773.9j1......0....1..gws-wiz.......0i71.1zyrMRhMZ7A">Other</li>
+					</ul>
+				</li>
+			</div>
+		</div>
+
+<img src="Baller.jpg" width="300px" height="200px">
+<div class="container">       
+  <table class="table">
+    <thead>
+    	<p>Here we display the league's top scorers of this NBA regular season</p>
+    	<h2>The NBA's Top Scorers</h2>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Points Per Game</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>James</td>
+        <td>Harden</td>
+        <td>36.1</td>
+      </tr>
+      <tr>
+        <td>Paul</td>
+        <td>George</td>
+        <td>28.0</td>
+      </tr>
+      <tr>
+        <td>Giannis</td>
+        <td>Antetokounmpo</td>
+        <td>27.7</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<section>
+	<p class="red">
+		The NBA's top notch are presented on this website. We show who's next, who's best, and whoever balls out.
+	</p>
+</section>
+<section>
+	<p class="red">
+		We get every update on a baller needed.
+	</p>
+</section>
+<section>
+	<p style="font-size: 40px">
+		Team to Team Coverage!!
+	</p>
+</section>
+<img src="Kyrie.jpg" width="300px" height="200">
+	<h2>Submit Information for Website Award</h2>
+<span id ="formerror" class="error"></span>
+<form action="submit.html" id="myform" target="_blank" method="POST">
+	<label for="firstName">First Name</label>
+	<input type = "text" name="firstName" id="firstName" placeholder="First Name">
+	<br><br>
+	<label for="lastName">Last Name</label>
+	<input type = "text" name="lastName" id="lastName" placeholder="Last Name">
+	<br><br>
+	<label for="address">Address</label>
+	<input type = "text" name="address" id="address" placeholder="Address">
+	<br><br>
+	<label for="phoneNumber">Phone Number *</label>
+	<input type = "text" name="phoneNumber" required id="phoneNumber" placeholder="xxx-xxx-xxxx">
+	<br><br>
+	<label for="emailAddress">Email Address *</label>
+	<input type = "email" name="emailAddress" required id="emailAddress" placeholder="you@you.com">
+	<br><br>
+	<label for="password">Password *</label>
+	<input type = "text" name="password" required id="password" placeholder="Password">
+	<br><br>
+	<label for="male">Male</label>
+	<input type="checkbox" name="Male" id="male">
+	<br><br>
+	<label for="female">Female</label>
+	<input type="checkbox" name="Female" id="female">
+	<br><br>
+	<p>Submit Information for Website</p>
+	<input type="submit" value="Submit">
+</form>
+
+<script type="text/javascript">
+// 	var firstName = document.getElementById('firstName').value;
+// 	var lastName = document.getElementById('lastName').value;
+// 	var address = document.getElementById('address').value;
+// 	var phoneNumber = document.getElementById('phoneNumber').value;
+// 	var emailAddress = document.getElementById('emailAddress').value;
+// 	var password = document.getElementById('password').value;
+// if (password=='')
+// {
+	
+// }
+// else
+// 	return true;
+var myError = document.getElementById('formerror');
+var phoneNumber = document.getElementById('phoneNumber');
+phoneNumber.onchange = function() {
+	var phonePattern = new RegExp("\\d{3}[\\-]\\d{3}[\\-]\\d{4}", "i");
+	var isValid = this.value.search(phonePattern) >= 0;
+	if (!(isValid)) {
+		myError.innerHTML = "Input does not match expected pattern";
+	}
+	else { 
+		myError.innerHTML = "";
+	}
+}
+var emailAddress = document.getElementById('emailAddress');
+emailAddress.onchange = function() {
+	var emailPattern = new RegExp(" \b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b");
+	var isValid = this.value.search(emailPattern) >= 0;
+	if (!(isValid)) {
+		myError.innerHTML = "Input does not match expected pattern";
+	}
+	else { 
+		myError.innerHTML = "";
+	}
+}
+var password = document.getElementById('password');
+password.onchange = function() {
+	var passwordPattern = new RegExp("/^(?=.*[0-9]+.*)(?=.*[a-zA-z]+.*)[0-9a-zA-Z]{6,}$/;");
+	var isValid = this.value.search(passwordPattern) >= 0;
+	if (!(isValid)) {
+		myError.innerHTML = "Input does not match expected pattern";
+	}
+	else { 
+		myError.innerHTML = "";
+	}
+
+}
+
+</script>
+<footer>
+	Come And Swish With Us Again
+	<p>&copy;Khari Barley</p>
+</footer>
+</body>
+</html>
+
